@@ -2,9 +2,9 @@ import express from 'express'
 import { config } from 'dotenv'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import jobRouter from './routes/jobRoutes.js'
-import userRouter from './routes/userRoutes.js'
-import applicationRouter from './routes/applicationRoutes.js'
+import jobRouter from './routes/job.Router.js'
+import userRouter from './routes/users.Router.js'
+import applicationRouter from './routes/application.Router.js'
 
 const app = express()
 config({ path: './env' })

@@ -1,4 +1,22 @@
-const { Router } = require('express')
+import express from 'express'
+import {
+  deleteJob,
+  getAllJobs,
+  getMyJobs,
+  getSingleJob,
+  postJob,
+  updateJob
+} from '../controllers/job.controller.js'
 
-const router = Router()
+import { isAuthenticated } from '../middleware/auth.js'
+
+const router = express.Router()
+
+router.get('/getall', getAllJobs)
+router.post('/post', isAuthenticated, postJob)
+router.get('/getmyjobs', isAuthenticated, getMyJobs)
+router.put('/update/:id', isAuthenticated, updateJob)
+router.delete('/delete/:id', isAuthenticated, deleteJob)
+router.get('/:id', isAuthenticated, getSingleJob)
+
 export default router
