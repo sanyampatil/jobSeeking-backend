@@ -1,7 +1,7 @@
 import { application } from 'express'
 import { catchAsyncErrors } from '../middleware/catchAsyncError.js'
 import ErrorHandler from '../middleware/error.js'
-import { Job } from '../model/job.model.js'
+import Job from '../model/job.model.js'
 import cloudinary from 'cloudinary'
 import { Application } from '../model/application.model.js'
 

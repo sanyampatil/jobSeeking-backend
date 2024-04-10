@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 import jobRouter from './routes/job.Router.js'
 import userRouter from './routes/users.Router.js'
 import applicationRouter from './routes/application.Router.js'
+import { errorMiddleware } from './middleware/error.js'
 
 const app = express()
 config({ path: './env' })
